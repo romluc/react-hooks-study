@@ -13,7 +13,7 @@ import UseContext from '../../views/examples/UseContext'
 import UseReducer from '../../views/examples/UseReducer'
 import UseCustom from '../../views/examples/UseCustom'
 
-const Content = (props) => (
+const Content = () => (
   <main className='Content'>
     <Switch>
       <Route exact path='/'>
