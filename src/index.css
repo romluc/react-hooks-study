@@ -1,3 +1,7 @@
+:root {
+  --main-bg-color: teal;
+}
+
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
@@ -5,7 +9,7 @@ body {
 
 .text {
   font-weight: 300;
-  font-size: 5rem;
+  font-size: 3.5rem;
 }
 
 .red {
@@ -13,28 +17,56 @@ body {
   color: red;
 }
 
+.green {
+  font-weight: 700;
+  color: green;
+}
+
 .input {
   font-weight: 300;
-  font-size: 4rem;
+  font-size: 2.2rem;
   margin: 20px 0px;
+  padding: 4px 12px;
+  border: 1px solid var(--main-bg-color);
+  border-radius: 4px;
+  box-shadow: 0 0 2px var(--main-bg-color);
+}
+
+.input:focus {
+  outline: none;
+  border: 1px solid var(--main-bg-color);
+  box-shadow: 0 0 4px var(--main-bg-color);
 }
 
 .btn {
-  border-radius: 25px;
+  border-radius: 12px;
   margin: 10px;
-  padding: 15px 35px;
+  padding: 10px 30px;
   border: none;
   outline: none;
-  background-color: #0092c3;
+  background-color: var(--main-bg-color);
 
-  font-size: 3rem;
+  font-size: 1.5rem;
   color: #fff;
+  cursor: pointer;
 }
 
 .center {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+.col {
+  flex-direction: column;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.narrow {
+  max-width: 100px;
 }
