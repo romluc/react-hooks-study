@@ -9,16 +9,16 @@ body {
 
 .text {
   font-weight: 300;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
 }
 
 .red {
-  font-weight: 700;
+  font-weight: 500;
   color: red;
 }
 
 .green {
-  font-weight: 700;
+  font-weight: 500;
   color: green;
 }
 
@@ -69,4 +69,11 @@ body {
 
 .narrow {
   max-width: 100px;
+}
+
+.Home-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
 }
