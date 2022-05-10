@@ -3,6 +3,14 @@ import PageTitle from '../../components/layout/PageTitle'
 import SectionTitle from '../../components/layout/SectionTitle'
 
 import { initialState, reducer } from '../../store'
+import {
+  addNumber,
+  divNumberBy25,
+  login,
+  logout,
+  numberTimes7,
+  numberToInt,
+} from '../../store/actions'
 
 const UseReducer = () => {
   const [state, dispatch] = useReducer(reducer, initialState)
@@ -10,7 +18,7 @@ const UseReducer = () => {
     <div className='UseReducer'>
       <PageTitle
         title='UseReducer hook'
-        subtitle='Another way to manage state!'
+        subtitle='Another way to manage state, especially complex ones!'
       />
       <SectionTitle title='Exercise #1' />
       <div className='center col'>
@@ -22,26 +30,34 @@ const UseReducer = () => {
         <div className='mb-4'>
           <button
             className='btn'
-            onClick={() => dispatch({ type: 'login', payload: 'John' })}
+            onClick={() => login(dispatch, 'John Doe')}
             disabled={state.user}
           >
             Login
           </button>
           <button
             className='btn'
-            onClick={() => dispatch({ type: 'logout', payload: null })}
+            onClick={() => logout(dispatch)}
             disabled={!state.user}
           >
             Logout
           </button>
         </div>
         <span className='text'>{state.number} </span>
-        <button
-          className='btn'
-          onClick={() => dispatch({ type: 'addNumber', payload: 1 })}
-        >
-          +1
-        </button>
+        <div className='center'>
+          <button className='btn' onClick={() => addNumber(dispatch, 1)}>
+            +1
+          </button>
+          <button className='btn' onClick={() => divNumberBy25(dispatch)}>
+            / 25
+          </button>
+          <button className='btn' onClick={() => numberTimes7(dispatch)}>
+            * 7
+          </button>
+          <button className='btn' onClick={() => numberToInt(dispatch)}>
+            to Int
+          </button>
+        </div>
       </div>
     </div>
   )
